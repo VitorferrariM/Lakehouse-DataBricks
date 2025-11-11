@@ -69,4 +69,6 @@ Este projeto une engenharia de dados, ciência e visualização em um fluxo auto
 </p>
 
 
-
+<p align="center">
+  <img src="Captura de tela 2025-11-11 091806.jpg" alt="Arquitetura do Projeto" width="800">
+</p>
