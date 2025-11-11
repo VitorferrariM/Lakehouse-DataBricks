@@ -1,6 +1,6 @@
-🌌 Projeto: Pipeline de Dados — NASA API com Databricks Lakehouse
+🌌 API da NASA – Temperatura de Marte
 
-O Lakehouse-DataBricks (NASA API) é um projeto completo de engenharia de dados que demonstra, na prática, a construção de um pipeline moderno de dados baseado no conceito de arquitetura Lakehouse.
+Este projeto utiliza a API pública da NASA para coletar dados meteorológicos reais do planeta Marte, incluindo informações de temperatura, pressão atmosférica e velocidade do vento obtidas pela sonda InSight.
 
 A partir da API pública da NASA, os dados são coletados, tratados e organizados em múltiplas camadas (Bronze, Silver e Gold), seguindo o modelo Medallion de boas práticas para pipelines.
 Todo o fluxo é implementado dentro do Databricks, integrando com AWS S3 para armazenamento, DuckDB como apoio local de consultas e Streamlit para visualização dos resultados.
