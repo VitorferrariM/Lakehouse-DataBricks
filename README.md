@@ -37,10 +37,14 @@ Criação de métricas e agregações (Gold)
 
 Visualização
 Streamlit conectado à camada Gold
-
-
-
-
-
 Dashboards interativos mostrando os principais insights dos dados da NASA
+
+
+
+
+<p align="center">
+  <img src="lakehouse.png" alt="Arquitetura do Projeto" width="800">
+</p>
+
+
 
