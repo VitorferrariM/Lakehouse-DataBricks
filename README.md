@@ -1,43 +1,65 @@
 🌌 API da NASA – Temperatura de Marte
 
-Este projeto utiliza a API pública da NASA para coletar dados meteorológicos reais do planeta Marte, incluindo informações de temperatura, pressão atmosférica e velocidade do vento obtidas pela sonda InSight.
+Este projeto utiliza a API pública da NASA para coletar dados meteorológicos reais do planeta Marte, incluindo informações de temperatura, pressão atmosférica e velocidade do vento, obtidas pela sonda InSight.
 
-A partir da API pública da NASA, os dados são coletados, tratados e organizados em múltiplas camadas (Bronze, Silver e Gold), seguindo o modelo Medallion de boas práticas para pipelines.
-Todo o fluxo é implementado dentro do Databricks, integrando com AWS S3 para armazenamento, DuckDB como apoio local de consultas e Streamlit para visualização dos resultados.
+Os dados são coletados, tratados e organizados em múltiplas camadas (Bronze, Silver e Gold), seguindo o modelo Medallion — uma das principais boas práticas de engenharia de dados para pipelines modernos.
 
-O principal objetivo deste projeto é mostrar um fluxo real de engenharia de dados de ponta a ponta, utilizando ferramentas amplamente usadas no mercado, em um cenário que simula um projeto de dados corporativo moderno.
+Todo o fluxo é implementado dentro do Databricks, com integração à AWS S3 para armazenamento, DuckDB para consultas locais e Streamlit para visualização interativa dos resultados.
+
+O objetivo é demonstrar um pipeline completo de engenharia de dados, do ingestion à visualização, utilizando ferramentas amplamente aplicadas no mercado em um cenário que simula um projeto corporativo moderno de dados.
 
 🧠 O que este projeto demonstra
 
-Conceitos práticos de ETL/ELT dentro da arquitetura Lakehouse.
-Uso combinado de Python, Databricks, AWS e Streamlit em um pipeline real.
-Aplicação de boas práticas de versionamento, governança e visualização de dados.
-Capacidade de integração entre múltiplas ferramentas cloud e open source.
+Aplicação prática de conceitos de ETL/ELT dentro da arquitetura Lakehouse.
 
+Integração entre Python, Databricks, AWS e Streamlit em um fluxo de dados real.
+
+Boas práticas de versionamento, governança e visualização de dados.
+
+Capacidade de integração entre ferramentas cloud e open source.
 
 ⚙️ Arquitetura e Fluxo de Dados
-O fluxo segue o modelo Medalhão (Bronze → Silver → Gold):
 
-Ingestão
+O pipeline segue o modelo Medallion (Bronze → Silver → Gold), estruturado em quatro etapas principais:
+
+1️⃣ Ingestão
+
 Linguagem: Python
+
 Ferramentas: Databricks Notebooks
-Fonte de dados: NASA API
-Armazenamento inicial: Amazon S3 (Bronze)
-Arquivos salvos em formato JSON e convertidos para Parquet
 
-Armazenamento e Load
-Amazon S3 para camadas Bronze/Silver/Gold
-DuckDB para testes e consultas locais
-Controle de permissões via AWS IAM
+Fonte de dados: NASA InSight Weather API
 
-Transformação
-Databricks SQL e PySpark
-Limpeza, tratamento e normalização dos dados (Silver)
-Criação de métricas e agregações (Gold)
+Armazenamento inicial: Amazon S3 (camada Bronze)
 
-Visualização
-Streamlit conectado à camada Gold
-Dashboards interativos mostrando os principais insights dos dados da NASA
+Formato: JSON → Parquet
+
+2️⃣ Armazenamento e Load
+
+Camadas: Bronze, Silver e Gold armazenadas no Amazon S3
+
+Banco local: DuckDB para testes e consultas rápidas
+
+Governança: Controle de permissões via AWS IAM
+
+3️⃣ Transformação
+
+Tecnologias: Databricks SQL e PySpark
+
+Processos: Limpeza, padronização e enriquecimento dos dados (Silver)
+
+Resultados: Métricas, agregações e insights prontos para consumo (Gold)
+
+4️⃣ Visualização
+
+Ferramenta: Streamlit
+
+Conexão: Camada Gold
+
+Resultados: Dashboards interativos com os principais indicadores e insights meteorológicos de Marte
+
+✨ Resumo:
+Este projeto une engenharia de dados, ciência e visualização em um fluxo automatizado e escalável, explorando dados reais da NASA para demonstrar o poder do ecossistema Databricks + AWS + Python + Streamlit.
 
 
 
